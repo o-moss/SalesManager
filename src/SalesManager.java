@@ -15,9 +15,9 @@ public class SalesManager {
         return max;
     }
 
-    public int min() {
-        int min = sales[0];
-        for (int sale : sales) {
+    public long min() {
+        long min = sales[0];
+        for (long sale : sales) {
             if (sale < min) {
                 min = sale;
             }
@@ -26,13 +26,13 @@ public class SalesManager {
     }
 
 
-    public int trimmedMean() {
-        int max = this.max();
-        int min = this.min();
-        int sum = 0;
-        int trimmedMean = 0;
-        int i = 0;
-        for (int sale : sales) {
+    public long trimmedMean() {
+        long max = this.max();
+        long min = this.min();
+        long sum = 0;
+        long trimmedMean = 0;
+        long i = 0;
+        for (long sale : sales) {
             if (sale < max & sale > min) {
                 sum += sale;
                 i++;
