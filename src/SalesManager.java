@@ -27,18 +27,11 @@ public class SalesManager {
 
 
     public long trimmedMean() {
-        long max = this.max();
-        long min = this.min();
         long sum = 0;
-        long trimmedMean = 0;
-        long i = 0;
         for (long sale : sales) {
-            if (sale < max & sale > min) {
                 sum += sale;
-                i++;
             }
-        }
-        trimmedMean = sum / i;
+        long trimmedMean = (sum - this.max() - this.min()) / (sales.length - 2);
         return trimmedMean;
     }
 }
