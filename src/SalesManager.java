@@ -29,8 +29,8 @@ public class SalesManager {
     public long trimmedMean() {
         long sum = 0;
         for (long sale : sales) {
-                sum += sale;
-            }
+            sum += sale;
+        }
         long trimmedMean = (sum - this.max() - this.min()) / (sales.length - 2);
         return trimmedMean;
     }
