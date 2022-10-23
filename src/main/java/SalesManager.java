@@ -27,6 +27,9 @@ public class SalesManager {
 
 
     public long trimmedMean() {
+        if (sales.length - 2 == 0) {
+            throw new ArithmeticException("Деление на 0!");
+        }
         long sum = 0;
         for (long sale : sales) {
             sum += sale;
